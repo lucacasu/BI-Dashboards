@@ -1,8 +1,11 @@
-# Business Intelligence Dashboardshttps://github.com/lucacasu/BI-Dashboards/tree/main
+# Dashboards
 **Dashboards leveraging open source data.**
  <br>
  <br>
+ <br>
 
+
+## Google Analytics data from Google's Merchandise Store
 **Tool:** Looker Studio / Google Analytics <br>
 **Language:** SQL <br>
 **Data:** Sourced from Google Merchandise Store. <br>
@@ -19,35 +22,38 @@ This dashboard explores revenue sources, key store items and paid traffic perfor
 **Tool:** PowerBI <br>
 **Language:** DAX <br>
 **Data:** Global Terrorism Database (GTD), START, University of Maryland – https://www.start.umd.edu/gtd <br>
-**Link:** [....]
-
+**Link:** [....] <br>
+**Download:** [....] <br> <br>
 
 
 
 ### Country facts
 Here something.....
 ![GTD presentation](video/GTD_presentation_take_1.gif)
-
-
+<br>
+<br>
 
 
 ### Regional compasion
 Here something.....
 ![GTD presentation](video/GTD_presentation_take_2.gif)
 
-
+<br>
+<br>
 
 ### Event and terrorrist group activity
 Here something.....
 ![GTD presentation](video/GTD_presentation_take_3.gif)
 
-
+<br>
+<br>
 
 ### Measures
 Here something.....
 ![img](video/measures.png)
 
-
+<br>
+<br>
 
 ```sql
 clean_g_nkill_sum = 
