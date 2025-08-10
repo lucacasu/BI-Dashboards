@@ -12,7 +12,7 @@ Projects leveraging open source data.
 **Data:** Sourced from Google Merchandise Store. <br>
 **Link:** https://lookerstudio.google.com/reporting/9e6bc7f0-0b00-44dd-9754-31a5d1aa41c9
 
-This dashboard explores revenue sources, key store items and paid traffic performance. The user gets a snapshot of moth-to-date revenue figures with quarterly benchmark, followed by a custom-made brand and item breakdown, which was extracted in Looker from the product name field. The main store events (views, add-to-cart and purchases) are displayed by week, alonside the respective figures. The paid traffic summary shows all active campaigns ordered and colored by ROAS (Return on Ad Spending).
+This dashboard explores revenue sources, key store items and paid traffic performance of the Google Analytics account from Google's Merchandise store. The user gets a snapshot of moth-to-date revenue figures with quarterly benchmark, followed by a custom-made brand and item breakdown, which was extracted in Looker from the product name field. The main store events (views, add-to-cart and purchases) are displayed by week, alonside the respective figures. The paid traffic summary shows all active campaigns ordered and colored by ROAS (Return on Ad Spending).
 <br>
 <br>
 <br>
@@ -35,8 +35,15 @@ The Event report is accessed through the ⓘ icon in the Region report. Here, th
 The data has placeholder values to indicate unknown numbers. All fields contain custom measures that ensure the correct formatting and context. 
 
 + All DAX measures in the group's activity handle the selection of a single (scalar) or multiple (table) group names as a filter for the aggregations. This is achieved through a combination of custom slicer interactions and DAX calculations. *(see code below)*
+
+
++  The number of perpetrators can't be zero. If a placeholder or no value at all is available, the measure retuns "Unknown". Killed and captured figures can be unknown, zero or a formatted number.
++ If multiple events are seleceted, the kidnapping / ransom indicators show the number of events instead of the Yes/No of single events. The fields can also be unknown.
++ If multiple perpetrators are selected, the measures return "Multiple Groups". (also for dates, countries)
++ Maps filter out events where some of the location fields is unknown to prevent misplaced events. Location accuracy is improved by concatenating multiple fields.
+
 <details>
-<summary><b>[CODE] Measure </b></summary>
+<summary><b>[CODE] Aggregation Measure </b></summary>
 
 ```sql
 clean_g_nkill_sum = 
@@ -82,11 +89,8 @@ RETURN
 ```
 </details>
 
-+  The number of perpetrators can't be zero. If a placeholder or no value at all is available, the measure retuns "Unknown". Killed and captured figures can be unknown, zero or a formatted number.
-+ If multiple events are seleceted, the kidnapping / ransom indicators show the number of events instead of the Yes/No of single events. The fields can also be unknown.
-
 <details>
-<summary><b>[CODE] Measure </b></summary>
+<summary><b>[CODE] Indicator Measure </b></summary>
  
 ```sql
 clean_property_indicator = 
@@ -112,16 +116,10 @@ RETURN
 ```
 </details>
 
-+ If multiple perpetrators are selected, the measures return "Multiple Groups". (also for dates, countries)
-+ Maps filter out events where some of the location fields is unknown to prevent misplaced events. Location accuracy is improved by concatenating multiple fields.
-
-
-
 ### Country
 ![GTD presentation](video/GTD_presentation_take_1.gif)
 <br>
 <br>
-
 
 ### Regional compasion
 ![GTD presentation](video/GTD_presentation_take_2.gif)
@@ -130,12 +128,6 @@ RETURN
 
 ### Event and terrorrist group activity
 ![GTD presentation](video/GTD_presentation_take_3.gif)
-<br>
-<br>
-
-### Measures
-![img](video/measures.png)
-
 <br>
 <br>
 
