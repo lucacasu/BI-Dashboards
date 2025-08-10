@@ -1,5 +1,6 @@
-# Dashboards
-**Dashboards leveraging open source data.**
+Dashboards
+======
+Projects leveraging open source data.
  <br>
  <br>
  <br>
@@ -12,11 +13,9 @@
 **Link:** https://lookerstudio.google.com/reporting/9e6bc7f0-0b00-44dd-9754-31a5d1aa41c9
 
 This dashboard explores revenue sources, key store items and paid traffic performance. The user gets a snapshot of moth-to-date revenue figures with quarterly benchmark, followed by a custom-made brand and item breakdown, which was extracted in Looker from the product name field. The main store events (views, add-to-cart and purchases) are displayed by week, alonside the respective figures. The paid traffic summary shows all active campaigns ordered and colored by ROAS (Return on Ad Spending).
-
-
- <br>
- <br>
-
+<br>
+<br>
+<br>
 
 
 ## Global Terrorism Database
@@ -24,10 +23,9 @@ This dashboard explores revenue sources, key store items and paid traffic perfor
 **Language:** DAX <br>
 **Data:** Global Terrorism Database (GTD), START, University of Maryland – https://www.start.umd.edu/gtd <br>
 **Link:** [....] <br>
-**Download:** [....] <br> <br>
+**Download:** [....] <br>
+<br>
 
-
--> Purpose Description <br>
 This dashboard explores more than 200.000 terrorist events from 1970 to 2019. The user can navigate between country statistics and a detailed event description with the respective terrorist group's activity overview. 
 
 The number of events and their respective killed, wounded and property damage figures is highlighted alongside a time series of attemps / successful attacks. The tables to the right further detail it by province, attack type, target type and weapon used. The country's figures are also presented in context of its neighbours, including a custom measure of event mortality (kills per event) for comparison. 
@@ -38,7 +36,7 @@ The data has placeholder values to indicate unknown numbers. All fields contain 
 
 + All DAX measures in the group's activity handle the selection of a single (scalar) or multiple (table) group names as a filter for the aggregations. This is achieved through a combination of custom slicer interactions and DAX calculations. *(see code below)*
 <details>
-<summary><b>[CODE]</b></summary>
+<summary><b>[CODE] Measure </b></summary>
 
 ```sql
 clean_g_nkill_sum = 
@@ -88,7 +86,7 @@ RETURN
 + If multiple events are seleceted, the kidnapping / ransom indicators show the number of events instead of the Yes/No of single events. The fields can also be unknown.
 
 <details>
-<summary><b>[CODE]</b></summary>
+<summary><b>[CODE] Measure </b></summary>
  
 ```sql
 clean_property_indicator = 
@@ -116,13 +114,6 @@ RETURN
 
 + If multiple perpetrators are selected, the measures return "Multiple Groups". (also for dates, countries)
 + Maps filter out events where some of the location fields is unknown to prevent misplaced events. Location accuracy is improved by concatenating multiple fields.
-
-
-
-
-
-
-
 
 
 
