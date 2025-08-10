@@ -33,7 +33,7 @@ Users gets a snapshot of moth-to-date revenue figures with quarterly benchmark, 
 <br>
 
 > [!NOTE]
-> **This dashboard explores more than 200.000 terrorist events from 1970 to 2019. The user can navigate between country statistics and a detailed event description with the respective terrorist group's activity history overview.** 
+> **This dashboard explores more than 200.000 terrorist attacks from 1970 to 2019. The user can navigate between country statistics and a detailed event description with the respective terrorist group's activity history overview.** 
 
 The number of events and their respective killed, wounded and property damage figures is highlighted alongside a time series of attemps / successful attacks. The tables to the right further detail it by province, attack type, target type and weapon used. The country's figures are also presented in context of its neighbours, including a custom measure of event mortality (kills per event) for comparison. 
 
